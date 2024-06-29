@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+
+{% block title %}
+  Improv Coaches - List of all coaches
+{% endblock %}
+
+{% block content %}
+
+  <p><a href="/">HOME</a></p>
+
+  <h1>Improv Coaches</h1>
+
+  <ul>
+    {% for improv_coach in all_improv_coaches %}
+    <li><a href="improv_coaches/details/{{ improv_coach.id }}">{{ improv_coach.firstname }} {{ improv_coach.lastname }}</a></li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

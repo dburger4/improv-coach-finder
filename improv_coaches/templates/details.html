@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+
+{% block title %}
+  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
+
+{% block content %}
+  <h1>{{ improv_coach.firstname }} {{ improv_coach.lastname }}</h1>
+
+  <p>Phone: {{ improv_coach.phone }}</p>
+  <p>Member since: {{ improv_coach.joined_date }}</p>
+
+  <p>Back to <a href="/improv_coaches">Improv Coaches</a></p>
+
+{% endblock %}
