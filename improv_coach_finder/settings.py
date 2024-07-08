@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'improv_coach_finder.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'testpassword4444',
+        'HOST': 'improv-coach-finder.cnk0q4aywvk1.us-east-2.rds.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
