@@ -1,11 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
 <head>
   <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'mystyles.css' %}">  
 </head>
 
 <body>
+
+  <div class="topnav">
+    <a href="/">HOME</a> |
+    <a href="/improv_coaches">Improv Coaches</a>
+  </div>
 
   {% block content %}
   {% endblock %}

@@ -1,13 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
+
+<link rel="stylesheet" href="{% static 'myglobal.css' %}">
+
+
 <body>
 
-  {% for x in fruits %}
-  <h1>{{ x }}</h1>
-  {% endfor %}
-
-  <p>In views.py you can see what the fruits variable looks like.</p>
+  <ul>
+    {% for improv_coach in my_improv_coaches %}
+      <li>{{ improv_coach.firstname }}</li>
+    {% endfor %}
+  </ul>
+  <p>{% url 'testing' %}</p>
+  <!-- <h1>Hello {{ firstname }}, how are you?</h1> -->
 
 </body>
 

@@ -12,6 +12,7 @@ def improv_coaches(request):
   }
   return HttpResponse(template.render(context, request))
 
+
 def details(request, id):
   improv_coach = ImprovCoach.objects.get(id=id)
   template = loader.get_template('details.html')
@@ -20,13 +21,16 @@ def details(request, id):
   }
   return HttpResponse(template.render(context, request))
 
+
 def main(request):
   template = loader.get_template('index.html')
   return HttpResponse(template.render())
 
+
 def testing(request):
+  my_improv_coaches = ImprovCoach.objects.all().values()
   template = loader.get_template('template.html')
   context = {
-    'fruits': ['Apple', 'Banana', 'Cherry'],
+    'my_improv_coaches': my_improv_coaches
   }
   return HttpResponse(template.render(context, request))
